@@ -20,6 +20,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
  *
  */
 public class Server {
+	//clients里面保存了各个链接到服务的Channel，然后就可以往各个服务器上通过Channel发送消息
 	public static ChannelGroup clients = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);//多客户端之间转发
 	
 	public static void main(String[] args) throws Exception {
@@ -57,10 +58,12 @@ public class Server {
  *
  */
 class ServerChildHandler extends ChannelInboundHandlerAdapter { //SimpleChannleInboundHandler Codec
-	
+	/**
+	 * 初始化的处理
+	 */
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
-		Server.clients.add(ctx.channel());
+		Server.clients.add(ctx.channel());//ChannelHandlerContext是channel当前运行的网络环境，可以拿到当前的channel
 	}
 
 	/**

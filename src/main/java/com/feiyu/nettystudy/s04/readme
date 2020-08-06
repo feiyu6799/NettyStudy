@@ -1,0 +1,3 @@
+Client类保存并初始化Channel
+	
+	Channel：记录网络链接，发送  ， 接收

@@ -1,0 +1,5 @@
+学习使用EmbeddedChannel进行Codec的单元测试
+
+在/NettyStudy/src/test/java/TankMsgCodecTest.java里面写的单元测试
+
+测试写数据，读数据

@@ -1,0 +1,5 @@
+改造Client
+暴露调用接口 new Client().connect();
+
+
+fy:封装Client代码（提供调用接口）

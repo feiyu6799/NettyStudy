@@ -1,0 +1,7 @@
+在Client中保存Client对象，窗口显示后调用connect连接，
+处理actionPerformed事件时调用send发送
+
+封装Client.send(String msg)函数
+	保存Client中Channel对象，连接完毕之后进行初始化
+	添加send(String msg)函数
+	用初始化好的channel进行传输
